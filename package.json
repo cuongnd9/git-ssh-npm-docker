@@ -24,7 +24,7 @@
   "dependencies": {
     "@103cuong/thinid": "git+ssh://git@github.com/103cuong/thinid",
     "giin": "https://github.com/103cuong/giin",
-    "juno-js": "git+ssh://git@github.com:103cuong/juno.git",
+    "juno-js": "git+ssh://git@github.com:103cuong/juno-private.git",
     "viee": "^0.5.1"
   },
   "devDependencies": {
