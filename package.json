@@ -1,7 +1,8 @@
 {
   "name": "service-template",
-  "version": "1.0.0",
-  "main": "src/index.ts",
+  "version": "0.0.1",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "scripts": {
     "start:dev": "nodemon --ignore build/ --exec ts-node src/index.ts",
     "build": "rm -rf build && tsc",
@@ -21,7 +22,10 @@
     }
   },
   "dependencies": {
-    "giin": "^0.1.3"
+    "@103cuong/thinid": "git+ssh://git@github.com/103cuong/thinid",
+    "giin": "https://github.com/103cuong/giin",
+    "juno-js": "git+ssh://git@github.com:103cuong/juno.git",
+    "viee": "^0.5.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
