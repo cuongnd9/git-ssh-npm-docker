@@ -1,13 +1,16 @@
-FROM node:12
+FROM node:12-alpine
 
-WORKDIR /app
+ARG SSH_PRIVATE_KEY
 
-COPY package.json /app
-COPY yarn.lock /app
+RUN apk add git openssh-client
 
-RUN yarn
+COPY package.json yarn.lock ./
 
-COPY . /app
+RUN mkdir -p -m 0600 ~/.ssh && ssh-keyscan github.com >> ~/.ssh/known_hosts
+
+RUN ssh-agent sh -c 'echo $SSH_PRIVATE_KEY | base64 -d | ssh-add - ; yarn --network-concurrency 1'
+
+COPY . .
 
 RUN yarn build
 
