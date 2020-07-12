@@ -1,20 +1,16 @@
-FROM node:12
-
-WORKDIR /app
+FROM node:12-alpine
 
 ARG SSH_PRIVATE_KEY
-RUN mkdir -p /root/.ssh
-RUN echo $SSH_PRIVATE_KEY > /root/.ssh/id_rsa
-RUN chmod 600 /root/.ssh/id_rsa
-RUN ssh-keyscan -H github.com >> /etc/ssh/ssh_known_hosts
-RUN ssh -vT git@github.com
 
-COPY package.json /app
-COPY yarn.lock /app
+RUN apk add git openssh-client
 
-RUN yarn
+COPY package.json yarn.lock ./
 
-COPY . /app
+RUN mkdir -p -m 0600 ~/.ssh && ssh-keyscan github.com >> ~/.ssh/known_hosts
+
+RUN ssh-agent sh -c 'echo $SSH_PRIVATE_KEY | base64 -d | ssh-add - ; yarn --network-concurrency 1'
+
+COPY . .
 
 RUN yarn build
 
