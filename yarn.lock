@@ -1579,7 +1579,7 @@ get-value@^2.0.3, get-value@^2.0.6:
   resolved "https://registry.yarnpkg.com/get-value/-/get-value-2.0.6.tgz#dc15ca1c672387ca76bd37ac0a395ba2042a2c28"
   integrity sha1-3BXKHGcjh8p2vTesCjlbogQqLCg=
 
-giin@^0.1.3, "giin@https://github.com/103cuong/giin.git":
+"giin@https://github.com/103cuong/giin.git":
   version "0.1.3"
   resolved "https://github.com/103cuong/giin.git#bb1f21574a55322e02326692fa0172f2865324a7"
   dependencies:
@@ -2140,13 +2140,11 @@ jsonparse@^1.2.0:
   resolved "https://registry.yarnpkg.com/jsonparse/-/jsonparse-1.3.1.tgz#3f4dae4a91fac315f71062f8521cc239f1366280"
   integrity sha1-P02uSpH6wxX3EGL4UhzCOfE2YoA=
 
-"juno-js@git+ssh://git@github.com:103cuong/juno-private.git":
-  version "0.0.2"
-  resolved "git+ssh://git@github.com:103cuong/juno-private.git#6a741721fc8ada538843a2d4c4f35545272748d4"
+"juno-js@git+ssh://git@github.com:103z/juno.git":
+  version "0.1.1"
+  resolved "git+ssh://git@github.com:103z/juno.git#2ff03b19f9c8d6025ae8429cedee3bcbd13abf1f"
   dependencies:
-    giin "^0.1.3"
     lodash "^4.17.19"
-    thinid "^0.5.1"
     winston "^3.3.3"
 
 kind-of@^3.0.2, kind-of@^3.0.3, kind-of@^3.2.0:
@@ -3670,11 +3668,6 @@ text-table@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
-
-thinid@^0.5.1:
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/thinid/-/thinid-0.5.1.tgz#c1e828b1f7f3301c8ee95ed0d3ca0fbc388e3014"
-  integrity sha512-1o4s1JbX/lS23IdzC775NDqGatNh25NCCgjgEVeCLq+c6KbFztwQoTfkCsTMDU52dwnwL7D5xLCwPhNAK8N9qA==
 
 through2@^2.0.2:
   version "2.0.5"
