@@ -20,8 +20,8 @@ giin({
     id: 1,
   },
 })
-  .then(logger().info)
-  .catch(logger().error);
+  .then(logger.info)
+  .catch(logger.error);
 
-logger().info(thinid());
-logger().info(viee('🦄 Cương Trần'));
+logger.info(thinid());
+logger.info(viee('🦄 Cương Trần'));
