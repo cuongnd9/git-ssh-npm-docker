@@ -24,5 +24,6 @@ yarn add git+ssh://git@github.com:kimcuong060498/vietnamese.git
 ## docker image
 
 ```sh
-docker build -t kimcuong060498/docker-npm-git-ssh --build-arg SSH_PRIVATE_KEY="$(cat ~/.ssh/id_rsa | base64)" .
+git clone git@github.com:kimcuong060498/git-ssh-npm-docker.git
+docker build -t kimcuong060498/git-ssh-npm-docker --build-arg SSH_PRIVATE_KEY="$(cat ~/.ssh/id_rsa | base64)" .
 ```
